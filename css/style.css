@@ -23,6 +23,7 @@ body {
 }
 
 .container {
+    width: 95%;
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -132,7 +133,7 @@ body {
     align-items: center;
     margin-bottom: 60px;
     position: relative;
-    max-width: 420px;
+    max-width: 418px;
 }
 
 .card {
@@ -227,12 +228,147 @@ body {
 .footer-link {
     text-decoration: none;
     color: #3a383d;
+    margin-left: 25px;
 }
-.button:hover, .play:hover{
+
+.button:hover,
+.play:hover {
     background-color: #8a0303;
     transition: .7s;
 }
+
 .arrow:hover {
     background-image: url('../img/arrow-hover.svg');
     transition: .7s;
 }
+
+.menu-button {
+    display: none;
+}
+
+/* responsive */
+@media (max-width:760px) {
+    .play {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-content .left {
+        margin-bottom: 8px;
+    }
+
+    .footer-link:first-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:540px) {
+    .menu-button {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        right: 35px;
+        top: 40px;
+        border: none;    
+        cursor: pointer;    
+    }
+
+    .menu-button:before {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: 0;
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        transition: transform .2s;
+       
+    }
+
+    .menu-button:after {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        transition: transform .2s;
+    }
+
+    .menu-button-active {        height: 0;
+      
+    }
+
+    .menu-button-active:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .menu-button-active:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .header {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #9d2929;
+        flex-direction: column;
+        width: 250px;
+        padding-bottom: 40px;
+        display: none;
+    }
+
+    .header-active {
+        display: flex;
+    }
+
+    .logo {
+        margin-bottom: 25px;
+    }
+
+    .menu-list {
+        margin: auto;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-link {
+        margin-right: 0;
+        margin-bottom: 17px;
+    }
+
+    .social {
+        order: 1;
+        margin-bottom: 22px;
+    }
+
+    .social-link:first-child {
+        margin-left: 0;
+    }
+
+    .swiper-container {
+        width: 80%;
+    }
+    .main-content{
+        margin-top: 196px;
+    }
+    .main-title{
+        font-size: 56px;
+    }
+    .series{
+        width: 80%;
+    }
+   }
