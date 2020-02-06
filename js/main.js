@@ -1,20 +1,19 @@
 var mySwiper = new Swiper('.swiper-container', {
-    slidesPerView:1,//how you see card in slider
-    loop: true, //infinity
-    navigation: {
-        nextEl: '.arrow'//button next custom       
-      },
-      breakpoints: {
-      
-        540: {
-          slidesPerView: 2
-          // spaceBetween: 40
-        }
-      }
+  slidesPerView: 1, //how you see card in slider
+  loop: true, //infinity
+  navigation: {
+    nextEl: '.arrow' //button next custom       
+  },
+  breakpoints: {
+
+    540: {
+      slidesPerView: 2
+    }
+  }
 });
-var menuButton=document.querySelector('.menu-button');
+var menuButton = document.querySelector('.menu-button');
 var menu = document.querySelector('.header');
-menuButton.addEventListener('click', function(){
+menuButton.addEventListener('click', function () {
   menuButton.classList.toggle('menu-button-active');
-menu.classList.toggle('header-active');
+  menu.classList.toggle('header-active');
 })
