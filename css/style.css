@@ -43,15 +43,27 @@ body {
 
 .menu-link {
     font-size: 14px;
-    line-height: 16px;
     color: #ffffff;
     text-decoration: none;
     margin-right: 24px;
+    border-bottom: 1px solid transparent;
+    transition: .33s;
+}
+
+.menu-link:hover {
+    border-bottom: 1px solid #8a0303;
+    transition: .33s;
 }
 
 .social-link {
     margin-left: 20px;
     text-decoration: none;
+    transition: .2s;
+}
+
+.social-link:hover svg path {
+    fill: #8a0303;
+    transition: .2s;
 }
 
 .genre {
