@@ -311,6 +311,7 @@ body {
         right: 0px;
         top: 13px;
         border: none;
+        z-index: 101;
     }
 
     .menu-button:before {
@@ -362,6 +363,8 @@ body {
         padding-bottom: 40px;
         transform: translate(100%, -100%);
         transition: ease-in-out .7s;
+    z-index: 100;
+
     }
 
     .header-active {
